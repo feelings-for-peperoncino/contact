@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 内容:
 {$post['contact']}
 EOT;
-  mb_send_mail($to, $subject, $body, "From: {$form}");
+  mb_send_mail($to, $subject, $body, "From: {$from}");
   unset($_SESSION['form']);
   header('Location: complete.php');
   exit();
